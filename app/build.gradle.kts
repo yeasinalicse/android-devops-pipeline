@@ -4,22 +4,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        getByName("debug") {
-            storeFile =
-                file("/Users/yeasin/yeasin_soft/android/test/android-devops-pipeline/key.jks")
-            storePassword = "123456"
-            keyAlias = "key"
-            keyPassword = "123456"
-        }
-        create("release") {
-            storeFile =
-                file("/Users/yeasin/yeasin_soft/android/test/android-devops-pipeline/key.jks")
-            storePassword = "123456"
-            keyPassword = "123456"
-            keyAlias = "key"
-        }
-    }
     namespace = "info.yeasin.androiddevopspipeline"
     compileSdk = 36
 
@@ -43,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
